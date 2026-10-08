@@ -8,6 +8,8 @@ We make small JavaScript and Node.js developer tools that do something useful an
 
 The priorities are questionable. The tools have tests.
 
+New here? [Meet DeployAnyway: five tools you can try in a minute](https://github.com/DeployAnyway/.github/blob/main/MEET-DEPLOYANYWAY.md).
+
 ## Meet the dependencies you can explain later
 
 | Package                                                              | What it does                                             | Why it exists                                |
