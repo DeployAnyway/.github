@@ -4,97 +4,39 @@
 
 Software nobody requested, built with questionable priorities, and shipped with absolute confidence!
 
-We make small JavaScript and Node.js developer tools that do something useful and then make a joke about it. Debug an error. Log a message. Check your deployment evidence. Prepare an explanation for the meeting you are about to have.
+We make useful JavaScript and Node.js tools with original developer humor. The priorities are questionable. The tools have tests.
 
-The priorities are questionable. The tools have tests.
+## Meet the flagship: bro-say 0.3.0
 
-New here? [Meet DeployAnyway: five tools you can try in a minute](https://github.com/DeployAnyway/.github/blob/main/MEET-DEPLOYANYWAY.md).
+13 original terminal friends, including a husky developer with an LGTM sign. 12 personas, six themes, speech and thoughts, Unicode-aware wrapping, stdin and seeded choices. Emotional support for production, without pretending to repair production.
 
-**[Try all five tools in your browser →](https://deployanyway.github.io/)** No signup or API keys. Error translations, excuse batches, scoped dog logs, deployment preflight, and boxed terminal hype.
+**[Try the flagship and all five tools in your browser →](https://deployanyway.github.io/candidate/)** No signup or API keys. Inputs stay in your browser.
 
-## Meet the dependencies you can explain later
-
-| Package                                                              | What it does                                             | Why it exists                                |
-| -------------------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------- |
-| [error-translator](https://github.com/DeployAnyway/error-translator) | Plain-English error explanations and debugging tips      | The stack trace has chosen violence.         |
-| [excuse-js](https://github.com/DeployAnyway/excuse-js)               | Developer excuse generator with repeatable seeded output | Finally, a dependency that takes the blame.  |
-| [doggo-log](https://github.com/DeployAnyway/doggo-log)               | Console logger with levels, JSON, and dog emojis         | Good logs. Very good logs.                   |
-| [ship-it-meter](https://github.com/DeployAnyway/ship-it-meter)       | Explainable deployment readiness scoring                 | Turns questionable confidence into a number. |
-| [bro-say](https://github.com/DeployAnyway/bro-say)                   | Terminal message formatter with six moods                | Your build output has a hype person now.     |
-
-All five are available on [npm under @deployanyway](https://www.npmjs.com/org/deployanyway). They use ES modules, require Node 22 or later, have zero production dependencies, and are MIT licensed.
-
-## Try one before the meeting starts
-
-Run these in a terminal with Node 22 or later. `npx` may ask to install the package the first time.
-
-### Translate the error that ruined your morning
+With Node 22.13+ or Node 24:
 
 ```sh
-npx @deployanyway/error-translator ECONNREFUSED
+npx @deployanyway/bro-say@0.3.0 "Deploy anyway." --character husky --mood corporate
+echo "Build failed" | npx @deployanyway/bro-say@0.3.0 --think --mood panic
 ```
 
-Get an explanation, likely causes, and practical next steps for a refused connection.
+## Five tools. One questionable organization.
 
-### Give the deployment a spokesperson
+| Package                                                              | Useful behavior in 0.3.0                                                 | Questionable confidence                     |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------- |
+| [bro-say](https://github.com/DeployAnyway/bro-say)                   | Original characters, say/think, wrapping, stdin and structured rendering | Your terminal deserves emotional support.   |
+| [error-translator](https://github.com/DeployAnyway/error-translator) | Error explanations, debugging steps, ordered batches and stdin           | The stack trace has chosen violence.        |
+| [excuse-js](https://github.com/DeployAnyway/excuse-js)               | Seeded excuses paired with an honest next action                         | Finally, a dependency that takes the blame. |
+| [doggo-log](https://github.com/DeployAnyway/doggo-log)               | Levels, JSON and copied request context with child loggers               | Good logs. Very good logs.                  |
+| [ship-it-meter](https://github.com/DeployAnyway/ship-it-meter)       | Evidence-based scores, preflight actions and gates with blockers         | Confidence is not a build artifact.         |
 
-```sh
-npx @deployanyway/excuse-js deployment --seed demo
-```
+All five are [on npm at 0.3.0](https://www.npmjs.com/org/deployanyway), MIT licensed, with CLIs, ESM/CommonJS APIs and TypeScript declarations. bro-say uses two direct runtime dependencies for terminal text; the other four have none. CI covers Linux Node 22/24 and Windows/macOS Node 24, with coverage and installed-package checks.
 
-Get the same original, workplace-safe excuse each time with the same seed in this version. Includes categories for bugs, builds, databases, deadlines, and more.
+[Meet DeployAnyway and try the examples](https://github.com/DeployAnyway/.github/blob/main/MEET-DEPLOYANYWAY.md) · [Launch post](https://github.com/DeployAnyway/.github/blob/main/LAUNCH-POST.md)
 
-### Put a good dog in your logs
+## Help us make 0.3.1 useful
 
-```sh
-npx @deployanyway/doggo-log info "Server started"
-```
+[Report a bro-say bug](https://github.com/DeployAnyway/bro-say/issues/new?template=bug_report.md) · [Pitch an original character](https://github.com/DeployAnyway/bro-say/issues/new?template=character.md) · [Suggest a feature](https://github.com/DeployAnyway/bro-say/issues/new?template=feature_request.md)
 
-Print an INFO log with a dog emoji. Add `--json` for structured output or `--no-emoji` when the incident report gets serious.
+For other tools, use their repository's issue templates. Terminal/font feedback and original workplace-safe contributions are welcome. Read CONTRIBUTING.md before sending a PR.
 
-### Measure the confidence before someone says ship it
-
-```sh
-npx @deployanyway/ship-it-meter --tests 125 --coverage 82 --build pass
-```
-
-Get a score, verdict, and reasons based on the evidence you supply. This is an illustrative heuristic, not a deployment guarantee; it does not inspect your CI.
-
-### Give your terminal a hype person
-
-```sh
-npx @deployanyway/bro-say "Tests passed!" --mood hype
-```
-
-```text
-BRO! THE TERMINAL IS APPLAUDING!
-
-Tests passed!
-```
-
-## Use them in JavaScript too
-
-Every tool exports a small API as well as a CLI. For example:
-
-```sh
-npm install @deployanyway/doggo-log
-```
-
-```js
-import { createDogLogger } from "@deployanyway/doggo-log";
-
-const log = createDogLogger({ json: true, prefix: "api" });
-log.info("Server started on port %d", 3000);
-```
-
-```json
-{ "level": "info", "message": "Server started on port 3000", "prefix": "api" }
-```
-
-Use an ES module project (`"type": "module"` in `package.json`) or save the example as `.mjs`. Each repository has API documentation, CLI options, examples, and a contribution guide.
-
-## Contribute something we probably should have thought of
-
-Bug reports, clearer explanations, useful features, documentation fixes, and original workplace-safe jokes are welcome. Open an issue in the relevant repository and read its `CONTRIBUTING.md` before sending a pull request.
-
-Small tools. Clear behavior. Funny output. Absolute confidence, supported by at least some evidence.
+Fonts can disagree on emoji width. Error explanations are curated; jokes are not incident evidence; readiness scores use supplied data and are not deployment authorization. bro-say's default output changed in 0.3.0—see its migration guide for --plain and --box compatibility options.

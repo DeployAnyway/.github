@@ -1,31 +1,25 @@
-# Meet DeployAnyway. We shipped it anyway.
+# Launch post — ready to copy
 
-Tools for developers who probably should know better.
+Meet DeployAnyway 0.3.0: tools for developers who probably should know better.
 
 Software nobody requested, built with questionable priorities, and shipped with absolute confidence!
 
-We built five small, useful JavaScript and Node.js tools, added original workplace-safe humor, and somehow remembered the tests:
+Our flagship **bro-say** gives your terminal 13 original characters, 12 developer personalities, six themes, speech/thought bubbles and Unicode-aware wrapping. The husky has an LGTM sign. We have tests.
 
-- **error-translator:** explains common errors and debugging steps. Rubber-duck mode adds commentary from the only teammate who has never broken main.
-- **excuse-js:** generates seeded developer excuses, now in batches for the meeting you are about to have. Finally, a dependency that takes the blame.
-- **doggo-log:** console logging with levels, JSON, nested scopes, and optional dog commentary. Good logs. Very good logs.
-- **ship-it-meter:** explainable deployment readiness scores and an actionable preflight checklist. Confidence is not a build artifact.
-- **bro-say:** six moods for terminal announcements, now with ASCII boxes. Your build output has a hype person.
+Four more tools explain errors in batches, pair excuses with honest next steps, carry request context in dog-themed logs, and gate releases against supplied evidence. All five ship CLIs, TypeScript declarations and ESM/CommonJS APIs.
 
-Try them in your browser: **https://deployanyway.github.io/**
+**Try the demo:** https://deployanyway.github.io/candidate/
 
-No signup. No API keys. Inputs stay in your browser. Prefer the terminal? With Node 22 or later:
+With Node 22.13+ or Node 24:
 
 ```sh
-npx @deployanyway/error-translator ECONNREFUSED --mode rubber-duck
-npx @deployanyway/excuse-js deployment --count 3 --seed demo
-npx @deployanyway/doggo-log success "Migration complete" --bark
-npx @deployanyway/ship-it-meter --tests 125 --coverage 82 --build pass --day friday --checklist
-npx @deployanyway/bro-say "Tests passed!" --mood hype --box
+npx @deployanyway/bro-say@0.3.0 "Deploy anyway." --character husky --mood corporate
+echo "Build failed" | npx @deployanyway/bro-say@0.3.0 --think --mood panic
+npx @deployanyway/excuse-js@0.3.0 testing --report --seed launch
 ```
 
-All five have a CLI and an ES module API, zero production dependencies, and an MIT license. The readiness score uses supplied evidence, not your actual CI; it is a heuristic, not permission to skip release checks.
+MIT licensed. No signup or API keys. Demo inputs stay in your browser. Emotional support is included; production repairs and deployment guarantees are not.
 
-Code, docs, and contributions: https://github.com/DeployAnyway
+Try it in your terminal and tell us what breaks—or pitch an original character: https://github.com/DeployAnyway/bro-say/issues/new/choose
 
-The priorities are questionable. The tools have tests.
+Code and all five packages: https://github.com/DeployAnyway
