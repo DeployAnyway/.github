@@ -8,6 +8,8 @@ DeployAnyway makes small JavaScript and Node.js tools for the parts of developme
 
 Bring Node 22 or later. We brought tests.
 
+Prefer a quick preview? **[Try the interactive demo](https://deployanyway.github.io/)** with rubber-duck error translations, seeded excuse batches, dog commentary, deployment checklists, and boxed announcements. Inputs stay in your browser.
+
 ## Five tools. Several questionable decisions.
 
 **[error-translator](https://www.npmjs.com/package/@deployanyway/error-translator)** explains common Node.js errors in plain English, with likely causes and debugging steps. Because the stack trace has chosen violence.

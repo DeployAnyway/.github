@@ -10,6 +10,8 @@ The priorities are questionable. The tools have tests.
 
 New here? [Meet DeployAnyway: five tools you can try in a minute](https://github.com/DeployAnyway/.github/blob/main/MEET-DEPLOYANYWAY.md).
 
+**[Try all five tools in your browser →](https://deployanyway.github.io/)** No signup or API keys. Error translations, excuse batches, scoped dog logs, deployment preflight, and boxed terminal hype.
+
 ## Meet the dependencies you can explain later
 
 | Package                                                              | What it does                                             | Why it exists                                |
