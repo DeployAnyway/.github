@@ -1,57 +1,51 @@
-# Meet DeployAnyway 0.3.0
+# Meet DeployAnyway 0.4.0
 
 **Tools for developers who probably should know better.**
 
 Software nobody requested, built with questionable priorities, and shipped with absolute confidence!
 
-Five useful Node.js tools. Original developer humor. CLIs, typed ESM/CommonJS APIs, cross-platform CI and installed-package checks. Bring Node 22.13+ or Node 24. We brought tests.
+Dallas and Benji, Todd's fun-loving, high-energy huskies, inspire the mindset: stay curious, bring some joy, and make room for play while doing the work. Developers deserve that too. A good joke can make a frustrating afternoon easier; useful behavior, tests and clear documentation make the tool worth keeping.
 
-**[Try the flagship playground](https://deployanyway.github.io/candidate/)**. No signup or API keys. Inputs stay in your browser. [Explore all five tools](https://deployanyway.github.io/).
+**[Explore all five live demos](https://deployanyway.github.io/)**. Every tool has discoverable choices, output previews, copyable examples, documentation and feedback links. Inputs stay in your browser.
 
-## bro-say: emotional support for production
+| Tool                                                                 | What you can use                                                                                              | Personality included                        |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| [bro-say](https://github.com/DeployAnyway/bro-say)                   | 13 characters, 20 moods, six themes, 48 message presets, say/think, Unicode wrapping and stdin                | Emotional support for production.           |
+| [error-translator](https://github.com/DeployAnyway/error-translator) | 46 curated errors, likely causes, next checks, batches and structured catalogs                                | The stack trace has chosen violence.        |
+| [excuse-js](https://github.com/DeployAnyway/excuse-js)               | 132 original excuses across eleven categories, seeded batches, full catalogs and honest next steps            | Finally, a dependency that takes the blame. |
+| [doggo-log](https://github.com/DeployAnyway/doggo-log)               | Six levels, JSON, request context, child loggers and 48 optional rotating commentary lines                    | Good logs. Very good logs.                  |
+| [ship-it-meter](https://github.com/DeployAnyway/ship-it-meter)       | Twelve evidence scenarios, explainable scores, release gates and prioritized plans with verification criteria | Confidence is not a build artifact.         |
 
-13 original terminal characters, 12 personas and six themes. Say or think, wrap Unicode text, pipe a build log, or request seeded random choices and structured JSON. The husky supplies an LGTM sign; your message stays yours.
+## Try them in your terminal
 
-```sh
-npx @deployanyway/bro-say@0.3.0 "Deploy anyway." --character husky --mood corporate
-echo "Build failed" | npx @deployanyway/bro-say@0.3.0 --think --mood panic
-npx @deployanyway/bro-say@0.3.0 "こんにちは 👋 café" --width 24 --theme neon
-```
-
-Install globally for bro-say and bro-think, or use the typed brosay, brothink and renderBro APIs. Default artwork/wrapping changed in 0.3.0; [migration options](https://github.com/DeployAnyway/bro-say/blob/main/MIGRATION.md) include --plain and --box. Fonts/emulators may disagree on emoji width.
-
-## Four more useful questionable decisions
-
-**[error-translator](https://www.npmjs.com/package/@deployanyway/error-translator)** explains common errors, likely causes and debugging steps. Now with ordered batches, stdin and a supported-error catalog. The stack trace has chosen violence.
+Bring Node 22.13+ or Node 24. All five packages are published at 0.4.0:
 
 ```sh
-echo '["ENOENT","ECONNREFUSED"]' | npx @deployanyway/error-translator@0.3.0 --batch --json
+npx @deployanyway/bro-say@0.4.0 --preset husky --seed dallas --mood dallas
+npx @deployanyway/error-translator@0.4.0 EACCES --mode rubber-duck
+npx @deployanyway/excuse-js@0.4.0 testing --report --seed launch
+npx @deployanyway/doggo-log@0.4.0 info "Request complete" --bark --bark-mode rotate --seed benji --json
+npx @deployanyway/ship-it-meter@0.4.0 --scenario ready --plan
 ```
 
-**[excuse-js](https://www.npmjs.com/package/@deployanyway/excuse-js)** pairs a seeded excuse with a useful next action. Joke, then fix the thing.
+## Go beyond the first joke
 
-```sh
-npx @deployanyway/excuse-js@0.3.0 testing --report --seed launch --json
-```
+bro-say can render your own text or select original presets. Use --list-characters, --list-moods, --list-themes and --list-presets to explore. Say and think accept stdin; renderBro returns structured data. --plain and --box provide legacy layouts; see its migration guide.
 
-**[doggo-log](https://www.npmjs.com/package/@deployanyway/doggo-log)** supplies levels, JSON and copied scalar context. Child loggers carry request context without mutating their parent. Good logs. Very good logs.
+error-translator supports --list and --catalog, plain or rubber-duck explanations, and ordered JSON batches. errorCatalog() exposes the same definitions as the CLI. Unknown errors stay explicitly unknown; suggested checks are guidance, not automatic fixes.
 
-```sh
-npx @deployanyway/doggo-log@0.3.0 info "Request complete" --context '{"requestId":"launch-42"}' --json
-```
+excuse-js provides --list and category --catalog. Seeded batches exhaust twelve phrases before repeating; excuseReport adds a practical next step. listExcuses returns a fresh array for your own interfaces.
 
-**[ship-it-meter](https://www.npmjs.com/package/@deployanyway/ship-it-meter)** turns supplied evidence into a score, actions and a gate with blockers. Blocked gates exit 1; malformed input exits 2. Confidence is not a build artifact.
+doggo-log defaults to classic behavior. Opt into bark commentary and barkMode: 'rotate' for eight distinct lines per level before repetition. Child loggers carry copied request context; filtering, JSON, timestamps and custom writers remain available. Failed writes do not consume a bark. Never use logs as secret redaction.
 
-```sh
-npx @deployanyway/ship-it-meter@0.3.0 --gate --tests 125 --coverage 92 --build pass --json
-```
+ship-it-meter offers --list-scenarios, --scenario and --plan, alongside --gate, --checklist and JSON stdin. Plans expose prioritized tasks and observable verification criteria, including rollback and monitoring. A blocked plan/gate exits 1; invalid input exits 2. Scores are heuristics based on supplied evidence, not deployment guarantees.
 
-npx may ask to install on first use. All packages are MIT licensed. bro-say has two direct runtime dependencies for display width/wrapping; the others have none. The error catalog is curated, logging is not secret redaction, and release scores do not inspect your CI or authorize deployment.
+All packages include typed ESM/CommonJS APIs, MIT licenses, migration notes, tests, coverage gates and cross-platform CI. bro-say has two direct runtime dependencies; the others have none. Pin package versions when seeded output must remain identical across catalog changes.
 
 ## Tell us what happened
 
-[Report a flagship bug](https://github.com/DeployAnyway/bro-say/issues/new?template=bug_report.md) · [Pitch an original character](https://github.com/DeployAnyway/bro-say/issues/new?template=character.md) · [Suggest a feature](https://github.com/DeployAnyway/bro-say/issues/new?template=feature_request.md)
+[Feedback for each tool](https://deployanyway.github.io/#feedback-title) · [Original character ideas](https://github.com/DeployAnyway/bro-say/issues/new?template=character.md)
 
-For another tool, open its repository's issue chooser. Include your version, OS, terminal/font and a small reproduction when relevant.
+Include your package version, OS, terminal/font where relevant, expected behavior and a small reproduction. Original workplace-safe contributions are welcome; read the repository's CONTRIBUTING.md first.
 
 [Code and documentation](https://github.com/DeployAnyway) · [Copyable launch post](LAUNCH-POST.md)
