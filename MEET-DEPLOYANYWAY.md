@@ -1,4 +1,4 @@
-# Meet DeployAnyway 0.4.0
+# Meet DeployAnyway 1.0.0
 
 **Tools for developers who probably should know better.**
 
@@ -8,24 +8,24 @@ Dallas and Benji, Todd's fun-loving, high-energy huskies, inspire the mindset: s
 
 **[Explore all five live demos](https://deployanyway.github.io/)**. Every tool has discoverable choices, output previews, copyable examples, documentation and feedback links. Inputs stay in your browser.
 
-| Tool                                                                 | What you can use                                                                                              | Personality included                        |
-| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| [bro-say](https://github.com/DeployAnyway/bro-say)                   | 13 characters, 20 moods, six themes, 48 message presets, say/think, Unicode wrapping and stdin                | Emotional support for production.           |
-| [error-translator](https://github.com/DeployAnyway/error-translator) | 46 curated errors, likely causes, next checks, batches and structured catalogs                                | The stack trace has chosen violence.        |
-| [excuse-js](https://github.com/DeployAnyway/excuse-js)               | 132 original excuses across eleven categories, seeded batches, full catalogs and honest next steps            | Finally, a dependency that takes the blame. |
-| [doggo-log](https://github.com/DeployAnyway/doggo-log)               | Six levels, JSON, request context, child loggers and 48 optional rotating commentary lines                    | Good logs. Very good logs.                  |
-| [ship-it-meter](https://github.com/DeployAnyway/ship-it-meter)       | Twelve evidence scenarios, explainable scores, release gates and prioritized plans with verification criteria | Confidence is not a build artifact.         |
+| Tool                                                                 | What you can use                                                                                           | Personality included                        |
+| -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| [bro-say](https://github.com/DeployAnyway/bro-say)                   | Measured build/test summaries, unknown/failure states, original characters, say/think and Unicode wrapping | Emotional support for production.           |
+| [error-translator](https://github.com/DeployAnyway/error-translator) | Error/cause diagnostics, cycle/depth bounds, 46 curated codes, likely causes and concrete next checks      | The stack trace has chosen violence.        |
+| [excuse-js](https://github.com/DeployAnyway/excuse-js)               | Factual incident drafts, owners/next updates/missing facts, public-safe defaults and 132 seeded jokes      | Finally, a dependency that takes the blame. |
+| [doggo-log](https://github.com/DeployAnyway/doggo-log)               | Isolated async request scopes, context/literal redaction, child loggers and optional husky commentary      | Good logs. Very good logs.                  |
+| [ship-it-meter](https://github.com/DeployAnyway/ship-it-meter)       | Node/Jest/Istanbul report policies, failed/stale/wrong-commit blockers and prioritized repair plans        | Confidence is not a build artifact.         |
 
 ## Try them in your terminal
 
-Bring Node 22.13+ or Node 24. All five packages are published at 0.4.0:
+Bring Node 22.13+ or Node 24. All five packages are published at 1.0.0:
 
 ```sh
-npx @deployanyway/bro-say@0.4.0 --preset husky --seed dallas --mood dallas
-npx @deployanyway/error-translator@0.4.0 EACCES --mode rubber-duck
-npx @deployanyway/excuse-js@0.4.0 testing --report --seed launch
-npx @deployanyway/doggo-log@0.4.0 info "Request complete" --bark --bark-mode rotate --seed benji --json
-npx @deployanyway/ship-it-meter@0.4.0 --scenario ready --plan
+npx @deployanyway/bro-say@1.0.0 --preset husky --seed dallas --mood dallas
+npx @deployanyway/error-translator@1.0.0 EACCES --mode rubber-duck
+npx @deployanyway/excuse-js@1.0.0 testing --report --seed launch
+npx @deployanyway/doggo-log@1.0.0 info "Request complete" --bark --bark-mode rotate --seed benji --json
+npx @deployanyway/ship-it-meter@1.0.0 --scenario ready --plan
 ```
 
 ## Go beyond the first joke
@@ -49,3 +49,11 @@ All packages include typed ESM/CommonJS APIs, MIT licenses, migration notes, tes
 Include your package version, OS, terminal/font where relevant, expected behavior and a small reproduction. Original workplace-safe contributions are welcome; read the repository's CONTRIBUTING.md first.
 
 [Code and documentation](https://github.com/DeployAnyway) · [Copyable launch post](LAUNCH-POST.md)
+
+## Worth keeping in your codebase
+
+Useful facts first; personality around them. V1 adds measured build summaries, error cause diagnostics, accountable incident drafts, request scopes/redaction and report-backed release policies. Every package ships runnable examples, stable structured APIs, CLI exit contracts, ESM/CommonJS declarations and migration notes. No telemetry or external API service is needed.
+
+The demo previews actual pure package behavior, with copyable Node examples where processes, files or AsyncLocalStorage are involved. Sample receipts are visibly labeled demonstration data. A gate consumes evidence from your trusted pipeline; it cannot verify an arbitrary submitted artifact or prove a deployment safe. Redaction covers configured context keys and literal secrets, not unknown secrets in arbitrary objects.
+
+We have tested release contracts and integrations; we have not proved community adoption, retention, or superiority to mature tools. Use it in a real workflow and [tell us what helped or got in the way](https://github.com/DeployAnyway/.github/issues).
